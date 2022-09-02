@@ -1,0 +1,98 @@
+/** 전체 블록 */
+ * {
+    border: 1px solid rebeccapurple;
+} 
+
+li {
+    list-style: none;
+}
+.ulfirst>li{
+    margin-left: 80px;
+}
+.ulsecond {
+    display: none;
+    padding-inline-start: 0;
+}
+/** body */
+/** header */
+#header {
+    display: block;
+    position: relative;
+    background-color: #fff;
+    text-align: center;
+}
+
+#header > div {
+    display: inline-block;
+}
+#homelogo{
+    width: auto;
+    margin-left: 10px;
+}
+.menuwrap{
+    width: 80%;
+}
+
+#languagemenu{
+    width: 6%;
+    margin-left: 1%;
+}
+
+.menuwrap > .ulfirst > li {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+
+.menuwrap > .ulfirst > li>a:hover~.ulsecond {
+    display: block;
+    position: absolute;
+}
+
+/** end header */
+
+body {
+    display: block;
+    position: relative;
+    width: 1130px;
+    padding: 20px 30px;
+    margin: 0 auto;
+}
+/** footer */
+footer {
+    display: block;
+    position: relative;
+    height: 300px;
+}
+footer > .footerwrap {
+    display: inline-block;
+}
+#sideicon {
+    display: block;
+    float: right;
+    width: 350px;
+    text-align: right;
+    margin-right: 10pt;
+}
+
+#familysite {
+    display: none;
+}
+
+.ulhorizon {
+    padding-inline-start: 0;
+}
+
+.ulhorizon > li {
+    display: inline-block;
+}
+
+#snsicon {
+    margin-top: 50%;
+}
+
+.snsiconimg {
+    width: 20pt;
+    height: auto;
+    vertical-align: middle;
+}

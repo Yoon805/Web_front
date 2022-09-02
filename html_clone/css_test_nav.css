@@ -1,0 +1,33 @@
+.navbar {
+    display: flex; /**가로정렬*/
+    justify-content: space-between;/**박스들 사이에 빈 공간 넣기*/
+    align-items: center;/**nav에 있는 박스들을 navbar내에서 가운데 정렬*/
+    background-color: var(--background-color);/**변수로 색깔 지정*/
+    padding: 8px 12px;/**공백 위아래 8px, 양 옆으로 12px*/
+  }
+
+  body{
+    margin: 0;
+    background-color: var(--background-color);
+  }
+
+  .navbar__logo{
+    color: var(--accent-color);
+    padding-left: 0;
+  }
+
+  a{
+    text-decoration: none;/**a태그 사용시 파란글씨, 밑줄제거*/
+    color: var(--text-color);
+  }
+
+.navbar__menu{
+    list-style: none; /**li태그 구분점 삭제 ● ←이거*/
+    display: flex;/**가로정렬*/
+    margin: 0;
+    padding-left: 0;
+}
+
+.navbar__menu li{
+    padding: 8px 30px;
+}

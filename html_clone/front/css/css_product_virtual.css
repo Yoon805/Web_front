@@ -1,0 +1,260 @@
+/** 전체 블록 */
+/* * {
+    border: 1px solid rebeccapurple;
+} */
+/*--------------------General--------------------*/
+:root {
+    --background-color: transparent;
+    --text-color: black;
+}
+a {
+    text-decoration: none;
+    /**a태그 사용시 파란글씨, 밑줄제거*/
+    color: var(--text-color);
+}
+
+li {
+    list-style: none;
+}
+/*-----------------------------------------------*/
+/*--------------------body-----------------------*/
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+#wrapper {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+/*------------------navbar-------------------*/
+.ulsecond {
+    display: none;
+    /**세부메뉴 숨기기 */
+    position: absolute;
+    padding-inline-start: 0;
+    text-align: center;
+}
+.ulfirst > li {
+    position: relative;
+    width: 130px;
+}
+.navsub {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    padding: 0 160px;
+    z-index: 10;
+    box-sizing: border-box;
+}
+#navbar {
+    display: flex;
+    /**가로정렬*/
+    justify-content: space-between;
+    /**박스들 사이에 빈 공간 넣기*/
+    align-items: center;
+    /**nav에 있는 박스들을 navbar내에서 가운데 정렬*/
+    background-color: var(--background-color);
+    /**변수로 색깔 지정*/
+    padding: 8px 12px;
+    /**공백 위아래 8px, 양 옆으로 12px*/
+}
+
+#navbar > div {
+    display: inline-block;
+    /**가로정렬*/
+    vertical-align: top;
+}
+#homelogo {
+    margin-left: 10px;
+}
+.menuwrap {
+    margin: 0;
+    padding-left: 0;
+}
+
+#languagemenu {
+    margin-right: 5%;
+    color: white;
+}
+
+.menuwrap > .ulfirst > li {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    padding: 8px 30px;
+}
+
+.menuwrap > .ulfirst > li > a:hover~.ulsecond {
+    display: block;
+}
+.ulsecond > li {
+    width: 130px;
+}
+
+#lanul > li {
+    width: 70px;
+}
+
+.dropdown {
+    display: block;
+    position: absolute;
+    top: -294px;
+    left: 0;
+    width: 100%;
+    height: 293px;
+    border-bottom: 1px solid #ffc2c2;
+    background-color: #fffaea;
+    transform: translateY(0);
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 10px;
+}
+
+#navbar:hover .menuwrap > ul > li > .ulsecond {
+    display: block;
+}
+
+#navbar:hover .dropdown {
+    z-index: -1;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(243px);
+    transition: all 0.25s ease;
+}
+#navbar:hover {
+    background-color: transparent;
+}
+
+#menuBtn {
+    opacity: 0;
+}
+#menuBtn:checked ~ .ulsecond {
+    display: block;
+}
+#navbar:hover a {
+    color: black;
+}
+/*------------------end navbar-------------------*/
+/*------------------container-------------------*/
+#container {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 0 160px;
+    box-sizing: border-box;
+    margin-top: 5%;
+}
+.detailpage1 {
+    width: 100%;
+    text-align: center;
+}
+.maincontent {
+    text-align: left;
+}
+.product_nav > ul > li {
+    display: inline-block;
+}
+.detailpage1 > div {
+    display: inline-block;
+}
+.detailtext {
+    width: 800px;
+}
+.downloadlink > li {
+    display: inline-block;
+}
+
+.detailpage2 {
+    width: 100%;
+}
+.detailcard1 {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    width: calc(100%/4.5);
+    height: 200px;
+    border: solid black 2px;
+    box-shadow: 4px 2px 2px gray;
+}
+.detailcard1>ul{
+    padding: 0 30px;
+    text-align: center;
+}
+.detailpage3{
+    width: 100%;
+}
+.detailpage3>div>ul>li{
+    text-align: center;
+    width: calc(100%/3.5);
+    display: inline-block;
+    padding: 10px;
+    margin: 20px;
+    border: solid black 2px;
+    box-shadow: 4px 2px 2px gray;
+}
+/** footer */
+footer {
+    display: block;
+    position: relative;
+    height: 300px;
+    width: 100%;
+    padding: 0 160px;
+    box-sizing: border-box;
+}
+footer > .footerwrap {
+    display: inline-block;
+}
+#sideicon {
+    display: block;
+    float: right;
+    width: 350px;
+    text-align: right;
+    margin-right: 10pt;
+}
+
+#familysite {
+    display: none;
+}
+
+.ulhorizon {
+    padding-inline-start: 0;
+}
+
+.ulhorizon > li {
+    display: inline-block;
+}
+.ulhorizon > li > a {
+    color: black;
+}
+
+#snsicon {
+    margin-top: 50%;
+}
+
+.snsiconimg {
+    width: 20pt;
+    height: auto;
+    vertical-align: middle;
+}
+
+#sideicon > div > label > a {
+    color: black;
+}
+#menuBtn2 {
+    opacity: 0;
+}
+#menuBtn2:checked ~#familysite {
+    position: absolute;
+    margin-left: 11%;
+    display: block;
+}
+#menuBtn2:checked ~#familysite > li > a {
+    display: block;
+    color: black;
+}
